@@ -1,6 +1,7 @@
 .cards {
     display: flex;
     justify-content:space-between;
+    background-color: black;
   }
   
   .card {
@@ -14,7 +15,7 @@
   }
   
   .card-body {
-    padding: 1rem;
+    padding:1rem;
   }
   
   .card-title {
@@ -27,14 +28,24 @@
   }
   
   .btn {
+    border: none;
     display: inline-block;
     padding: 0.5rem 1rem;
     background-color: #d92680;
     color: #fff;
     text-decoration: none;
-    border-radius: 3px;
+    border-radius: 15px;
   }
   
   .btn:hover {
     background-color: #0056b3;
   }
+.options{
+  text-align: center;
+  color: #f82586 ;
+  font-size:15px;
+  text-shadow: 0 0 10px  #f82586;
+  background-color: black;
+  background-size: 50px;
+  width: auto;
+}
