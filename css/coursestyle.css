@@ -40,6 +40,11 @@
     /* margin: auto; */
   }
 
+  .btn a {
+    color: #fff;
+    text-decoration: none;
+  }
+
   .full-time {
     margin-top: 1rem;
   }
