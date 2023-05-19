@@ -21,13 +21,11 @@
       <body>
           <!-- Navigation-->
                   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                          <button class="btn btn-outline-dark" type="submit">
-                            <a href="/html/cart.html" target="_blank">
-                              <i class="bi-cart-fill me-1"></i>
-                              Cart
-                              <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                            </a>
-                          </button>
+                    <button class="btn btn-outline-dark" type="submit" onclick="openCartPage()">
+                      <i class="bi-cart-fill me-1"></i>
+                      Cart
+                      <span id="cartCount" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    </button>
 
                       </form>
                   </div>
@@ -141,41 +139,41 @@
         <br>
           <div class="cards">
             <div class="card">
-              <img src="https://www.getmulberry.com/hubfs/shutterstock_1626375430.jpg" class="card-img-top" alt="...">
+              <img src="https://us.123rf.com/450wm/andreonegin/andreonegin2207/andreonegin220700241/188952844-business-woman-restaurant-owner-use-laptop-in-hands-dressed-elegant-pantsuit-sitting-table-in.jpg?ver=6" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">	Full Time online</h5>
+                <h5 class="card-title">Full Time Online : R37 250</h5>
                 <p class="card-text"><ul><li>Work remotely from anywhere</li>
-                <p class="card-text"><li>Maintain a dedicated and consistent work schedule</li>
-              </ul></p>
-                <a href="#" class="btn btn-primary">Add to Cart</a>
+                  <p class="card-text"><li>Enjoy the flexibility while working part time</li>
+                </ul></p>
+                <a href="#" class="btn btn-primary" onclick="addToCart('Full Time online', 37250)">Add to Cart</a>
               </div>
             </div>
             <div class="card">
               <img src="https://us.123rf.com/450wm/andreonegin/andreonegin2207/andreonegin220700241/188952844-business-woman-restaurant-owner-use-laptop-in-hands-dressed-elegant-pantsuit-sitting-table-in.jpg?ver=6" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Part Time Online</h5>
+                <h5 class="card-title">Part Time Online : R29 750</h5>
                 <p class="card-text"><ul><li>Work remotely from anywhere</li>
                   <p class="card-text"><li>Enjoy the flexibility while working part time</li>
                 </ul></p>
-                <a href="#" class="btn btn-primary">Add to Cart</a>
+                <a href="#" class="btn btn-primary" onclick="addToCart('Part Time online', 29750)">Add to Cart</a>
               </div>
             </div>
             <div class="card">
               <img src="https://www.saritasa.com/wp-content/uploads/2021/05/iStock-944707248-1024x683.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Full Time Onsite</h5>
+                <h5 class="card-title">Full Time Onsite : R77 250</h5>
                 <p class="card-text"><ul><li>Traditional work environment full time</li>
                   <p class="card-text"><li>Face-to-face interactions and collaboration</li>
-                <a href="#" class="btn btn-primary full-time">Add to Cart</a>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Full Time online', 77250)">Add to Cart</a>
               </div>
             </div>
             <div class="card">
               <img src="https://rare-gallery.com/uploads/posts/5293538-office-desk-computer-screen-work-people-productive-space-business-hacker-tech-dev-at-work-software-development-technology-build-software-code-hardware-wall-free-pictures.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">	Part Time Onsite</h5>
+                <h5 class="card-title">	Part Time Onsite : R44 750</h5>
                 <p class="card-text"><ul><li> Opt for a reduced work schedule at a physical location</li>
                   <p class="card-text"><li>Pursue other interests or responsibilities </li>
-                <a href="#" class="btn btn-primary">Add to Cart</a>
+                <a href="#" class="btn btn-primary" onclick="addToCart('Full Time online', 44750)">Add to Cart</a>
               </div>
             </div>
           </div>
@@ -187,6 +185,6 @@
           <!-- Bootstrap core JS-->
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
           <!-- Core theme JS-->
-          <script src="/js/course.js"></script>
+          <script src="/js/index.js"></script>
       </body>
   </html>
