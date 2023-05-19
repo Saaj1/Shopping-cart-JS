@@ -1,16 +1,17 @@
 let cartItems = [];
   let totalAmount = 0;
 
-  function addToCart(itemName, itemPrice) {
+  function addToCart(itemName, itemPrice, imageUrl) {
     const quantity = 1;
     const total = itemPrice * quantity;
 
-    cartItems.push({ itemName, itemPrice, quantity, total });
+    cartItems.push({ itemName, itemPrice, quantity, total, imageUrl });
     totalAmount += total;
 
     updateCart();
     updateCartCount();
   }
+
   function updateCart() {
     // Update the cart content and total amount display logic
     // ...
