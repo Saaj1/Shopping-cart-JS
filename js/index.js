@@ -10,6 +10,11 @@ let cartItems = [];
 
     updateCart();
     updateCartCount();
+
+    const cartItemImageElement = document.createElement('img');
+    cartItemImageElement.src = imageUrl;
+    cartItemImageElement.alt = itemName;
+    document.getElementById('cartContent').appendChild(cartItemImageElement);
   }
 
   function updateCart() {
