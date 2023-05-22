@@ -1,3 +1,4 @@
+// Variable for the items 
 let cartItems = [];
   let totalAmount = 0;
 
@@ -10,7 +11,7 @@ let cartItems = [];
 
     updateCart();
     updateCartCount();
-
+// Variable to call element by ID
     const cartItemImageElement = document.createElement('img');
     cartItemImageElement.src = imageUrl;
     cartItemImageElement.alt = itemName;
@@ -18,8 +19,7 @@ let cartItems = [];
   }
 
   function updateCart() {
-    // Update the cart content and total amount display logic
-    // ...
+  
   }
 
   function updateCartCount() {
