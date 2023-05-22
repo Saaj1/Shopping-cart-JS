@@ -56,6 +56,7 @@ function addToCart(itemName, itemPrice, imageUrl) {
   cartContentElement.appendChild(cartItemElement);
 }
 
+
 function updateTotal() {
   totalAmount = cartItems.reduce((total, item) => total + item.total, 0);
   const totalAmountElement = document.getElementById("totalAmount");
@@ -68,7 +69,6 @@ function initTotal() {
 }
 
 initTotal();
-
 
 function updateCart() {
   const cartContentElement = document.getElementById("cartContent");
@@ -88,36 +88,29 @@ function updateCart() {
     cartItemDetailsElement.classList.add('cart-item-details');
     cartItemDetailsElement.innerHTML = `
       <span class="item-name">${item.itemName}</span>
-      <span class="item-quantity">Quantity: ${item.quantity}</span>
+      <div class="quantity-container">
+        <button class="btn btn-secondary" onclick="decreaseQuantity(${i})">-</button>
+        <span class="item-quantity">${item.quantity}</span>
+        <button class="btn btn-secondary" onclick="increaseQuantity(${i})">+</button>
+      </div>
       <span class="item-total">Total: R ${item.total.toFixed(2)}</span>
     `;
-
-    const decreaseButton = document.createElement("button");
-    decreaseButton.className = "btn btn-secondary";
-    decreaseButton.textContent = "-";
-    decreaseButton.onclick = () => decreaseQuantity(i);
-
-    const increaseButton = document.createElement("button");
-    increaseButton.className = "btn btn-secondary";
-    increaseButton.textContent = "+";
-    increaseButton.onclick = () => increaseQuantity(i);
 
     const removeButton = document.createElement("button");
     removeButton.className = "btn btn-danger";
     removeButton.textContent = "Remove Item";
     removeButton.onclick = () => removeItem(i);
 
-    cartItemDetailsElement.appendChild(decreaseButton);
-    cartItemDetailsElement.appendChild(increaseButton);
     cartItemDetailsElement.appendChild(removeButton);
-
     cartItemElement.appendChild(cartItemImageElement);
     cartItemElement.appendChild(cartItemDetailsElement);
-
     cartContentElement.appendChild(cartItemElement);
   }
 
   updateTotal();
 }
+
+updateCart();
+
 
 updateCart();

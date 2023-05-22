@@ -5,15 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Cart</title>
+  <!-- Font awesome link  -->
+  <script src="https://kit.fontawesome.com/81eca7d0e3.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/cart.css">
 </head>
 <body>
   <div id="cartItems">
-    <h3 class="heading">Shopping Cart</h3>
+      <h3 class="heading">Shopping Cart <i class="fa-solid fa-cart-shopping"></i></h3>
     <div id="cartContent"></div>
-    <div id="totalAmount" class="total-amount">Total: $0.00</div>
-    <button class="btn btn-success checkout-btn" onclick="checkout()">Checkout</button>
-    <button class="btn btn-danger" onclick="removeAllItems()">Remove All</button>
+    <div class="checkout-button">
+        <div id="totalAmount" class="total-amount">Total: R0.00</div>
+        <div class="buttons">
+          <button class="btn btn-danger" onclick="removeAllItems()">Remove All</button>
+          <button class="btn btn-success checkout-btn" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
   </div>
 
   <script src="/js/cart.js"></script>
