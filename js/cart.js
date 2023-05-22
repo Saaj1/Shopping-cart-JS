@@ -1,6 +1,7 @@
+// Cart Items
 const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 let totalAmount = parseFloat(localStorage.getItem("totalAmount")) || 0;
-
+// Function to remove cart item
 function removeAllItems() {
   cartItems.length = 0;
   totalAmount = 0;
@@ -13,12 +14,12 @@ function removeItem(index) {
   updateCart();
   saveCartItems();
 }
-
+// Function section to increase or Decrease the Quantity of items added
 function decreaseQuantity(index) {
   const item = cartItems[index];
   if (item.quantity > 0) {
     item.quantity -= 1;
-    item.total = item.itemPrice * item.quantity; // Use item.itemPrice instead of item.price
+    item.total = item.itemPrice * item.quantity;
     updateCart();
     saveCartItems();
     updateTotal();
@@ -28,12 +29,12 @@ function decreaseQuantity(index) {
 function increaseQuantity(index) {
   const item = cartItems[index];
   item.quantity += 1;
-  item.total = item.itemPrice * item.quantity; // Use item.itemPrice instead of item.price
+  item.total = item.itemPrice * item.quantity;
   updateCart();
   saveCartItems();
   updateTotal();
 }
-
+// Add to cart Function to pull to page named cart.html
 function addToCart(itemName, itemPrice, imageUrl) {
   const quantity = 1;
   const total = itemPrice * quantity;
@@ -56,7 +57,7 @@ function addToCart(itemName, itemPrice, imageUrl) {
   cartContentElement.appendChild(cartItemElement);
 }
 
-
+// Function to update the total of itsems Value
 function updateTotal() {
   totalAmount = cartItems.reduce((total, item) => total + item.total, 0);
   const totalAmountElement = document.getElementById("totalAmount");
@@ -69,7 +70,7 @@ function initTotal() {
 }
 
 initTotal();
-
+// Funtion to Update the Cart after an action is done
 function updateCart() {
   const cartContentElement = document.getElementById("cartContent");
   cartContentElement.innerHTML = "";
@@ -95,7 +96,7 @@ function updateCart() {
       </div>
       <span class="item-total">Total: R ${item.total.toFixed(2)}</span>
     `;
-
+// Remove button Function by classname 
     const removeButton = document.createElement("button");
     removeButton.className = "btn btn-danger";
     removeButton.textContent = "Remove Item";
